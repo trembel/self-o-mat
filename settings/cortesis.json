@@ -1,0 +1,13 @@
+{
+  "camera_type": "gphoto",
+  "has_flash": false,
+  "has_button": true,
+  "disable_watchdog": false,
+  "debug": false,
+  "button_port_name": "/dev/ttyACM",
+  "image_dir": "/tmp",
+  "show_led_setup": true,
+  "force_image_dir_mountpoint": 0,
+  "fullscreen": false,
+  "trigger_delay": 5
+}
