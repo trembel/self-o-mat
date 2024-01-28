@@ -162,7 +162,7 @@ bool SelfomatController::connect(boost::filesystem::path path) {
 
     // We're connected. Read the settings and send a heartbeat
     sendHeartbeat();
-    loadSettingsFromBoard();
+    //loadSettingsFromBoard();
 
     return true;
 }

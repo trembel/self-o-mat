@@ -85,7 +85,7 @@ namespace selfomat {
             // BEGIN STATE
             struct settings currentSettings;
             // Initially we don't know the state of the button board
-            bool settingsLoaded = false;
+            bool settingsLoaded = true;
             bool settingsWritten = false;
             bool agreementStateEntered = false;
             bool flashStateEntered = false;
