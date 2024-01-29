@@ -11,7 +11,7 @@ std::string BoothGui::TAG = "BOOTH_GUI";
 
 BoothGui::BoothGui(bool fullscreen, bool debug, logic::ILogicController *logicController) : debugLogQueue(), stateTimer(), alertTimer() {
     // TODO: fixed resolution -> variable resolution
-    videoMode = sf::VideoMode(1280, 800);
+    videoMode = sf::VideoMode(1024, 600);
     this->currentState = STATE_INIT;
     this->shouldShowAgreement = false;
     this->debug = debug;
