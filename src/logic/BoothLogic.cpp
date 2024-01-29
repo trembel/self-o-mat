@@ -666,7 +666,7 @@ void BoothLogic::readSettings() {
     setPrintConfirmationEnabled(ptree.get<bool>("print_confirmation_enabled", false));
     setTemplateEnabled(ptree.get<bool>("template_enabled", false));
     setFlashEnabled(ptree.get<bool>("flash_enabled", false));
-    this->showAgreement = ptree.get<bool>("show_agreement", true);
+    this->showAgreement = false; //ptree.get<bool>("show_agreement", false);
     setFilterChoice(ptree.get<int>("filter_choice", BASIC_FILTER));
     setFilterGain(ptree.get<double>("filter_gain", 1.0));
     setDebugLogEnabled(ptree.get<bool>("debug_log_enabled", false));
