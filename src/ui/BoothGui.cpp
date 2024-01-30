@@ -228,8 +228,8 @@ void BoothGui::renderThread() {
                 float imageCenterY = (float) imageHeight * scale * 0.5f;
 
 
-                imageSprite.setPosition(videoMode.width - (windowCenterX - imageCenterX),
-                                        windowCenterY - imageCenterY);
+                imageSprite.setPosition(videoMode.width - (windowCenterX - imageCenterX) - 16,
+                                        windowCenterY - imageCenterY + 50);
 
 
                 if(templateEnabled && templateLoaded) {
