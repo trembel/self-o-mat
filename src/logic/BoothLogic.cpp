@@ -215,7 +215,7 @@ void BoothLogic::cameraThread() {
                         selfomatController.showPrinting();
 
                         // 4500ms from here for the user to decide
-                        boost::this_thread::sleep(boost::posix_time::milliseconds(4500));
+                        boost::this_thread::sleep(boost::posix_time::milliseconds(7500));
 
                         // Notify the printer thread
                         {
