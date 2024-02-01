@@ -28,7 +28,7 @@
 
 #define COLOR_MAIN          sf::Color(20, 64, 66, 255)
 #define COLOR_MAIN_LIGHT    sf::Color(155, 194, 189)
-#define COLOR_COUNTDOWN     sf::Color(128, 128, 128)
+#define COLOR_COUNTDOWN     sf::Color(200, 200, 200)
 #define COLOR_ALERT         sf::Color(200, 0, 0)
 
 namespace selfomat {
@@ -74,6 +74,7 @@ namespace selfomat {
             sf::VideoMode videoMode;
             sf::RenderWindow window;
             sf::Font hackFont;
+            sf::Font courierPrimeFont;
             sf::Font iconFont;
             sf::Font mainFont;
             sf::Color clearColor;

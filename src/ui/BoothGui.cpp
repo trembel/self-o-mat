@@ -31,6 +31,11 @@ bool BoothGui::start() {
         return false;
     }
 
+    if (!courierPrimeFont.loadFromFile("./assets/CourierPrime-Bold.ttf")) {
+        LOG_E(TAG, "Could not load font.");
+        return false;
+    }
+
     if (!iconFont.loadFromFile("./assets/self-o-mat.ttf")) {
         LOG_E(TAG, "Could not load font.");
         return false;
@@ -156,10 +161,9 @@ void BoothGui::renderThread() {
     iconText.setFillColor(COLOR_ALERT);
     iconText.setCharacterSize(50);
 
-    countdownText.setFont(hackFont);
+    countdownText.setFont(courierPrimeFont);
     countdownText.setFillColor(COLOR_COUNTDOWN);
-    countdownText.setCharacterSize(400);
-    countdownText.setStyle(1); // Bold
+    countdownText.setCharacterSize(600);
 
     alertText.setFont(mainFont);
     alertText.setFillColor(COLOR_ALERT);
@@ -597,8 +601,8 @@ void BoothGui::drawCountdown() {
 
     if (localCountdown > -1) {
         countdownText.setString(std::to_string(localCountdown));
-        countdownText.setPosition((window.getSize().x - countdownText.getLocalBounds().width) / 2,
-                                  0);
+        countdownText.setPosition((window.getSize().x - countdownText.getLocalBounds().width) / 2 - 20,
+                                  -130);
         window.draw(countdownText);
     }
 }
