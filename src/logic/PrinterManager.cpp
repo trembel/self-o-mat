@@ -206,7 +206,12 @@ bool PrinterManager::printImage() {
 
     resumePrinter();
 
-    int job_id = cupsCreateJob(CUPS_HTTP_DEFAULT, printer_name.c_str(), "self-o-mat", 0, nullptr);
+    int num_options = 0;
+    cups_option_t *options = NULL;
+    num_options = cupsAddOption(CUPS_MEDIA, CUPS_MEDIA_4X6,
+                            num_options, &options);
+    
+    int job_id = cupsCreateJob(CUPS_HTTP_DEFAULT, printer_name.c_str(), "self-o-mat", num_options, options);
 
     if (job_id > 0) {
         LOG_D(TAG, "successfully created the print job");
