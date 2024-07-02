@@ -216,6 +216,7 @@ void SelfomatController::handleCommand(cobs::ByteSequence &commandSequence) {
         return;
 
     uint8_t commandType = commandSequence[0];
+    LOG_E(TAG,"Got command ", std::to_string(commandType));
     switch (commandType) {
         case 'k': {
                 boost::unique_lock<boost::mutex> lk(state_mutex);
@@ -439,6 +440,7 @@ void SelfomatController::registerSerialPacketCallback() {
 bool SelfomatController::sendCommand(char command) {
     if(!button_serial_port.is_open())
         return false;
+    LOG_E(TAG,"Sending commang ", std::to_string(command));
     // cobs encode the command
     cobs::ByteSequence data;
     data.push_back(command);
